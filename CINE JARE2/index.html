@@ -1,0 +1,227 @@
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Cine Jaré</title>
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+</head>
+
+<body style="background-color: rgb(0, 0, 0);">
+    <header class="menu-principal">
+        <main>
+
+          <div class="header1">
+            <div class="logo">
+                <img src="./img/logo.png"/> 
+            </div>
+
+            <div class="login-busca">
+              <ul>
+                  <li><a href=""><img src="./img/login.png"/></a></li>
+                  <li><a href=""><img src="./img/busca.png"/></a></li>
+
+              </ul>
+         </div>
+     </div>
+
+            <div class="navbar">
+                <div class="em-cartaz">
+                    <button class="dropbtn">Em Cartaz ⯆ 
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="em-cartaz-content">
+                      <div class="header">
+                        <h4>Salas</h4>
+                      </div>
+                      <div class="row">
+                        <div class="column">
+                          <h4>Sala 1</h4>
+                          <a href="#">➧ The Batman</a>
+                          <a href="#">➧ Homem-Aranha: Sem Volta Para Casa</a>
+                          <a href="#">➧ Doutor Estranho: No Multiverso da Loucura</a>
+                        </div>
+                        <div class="column">
+                          <h4>Sala 2</h4>
+                          <a href="#">➧ Sonic 2</a>
+                          <a href="#">➧ Detetives do Prédio Azul 3</a>
+                          <a href="#">➧ Os Caras Malvados</a>
+                          
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#home">Novidades</a>
+                          <a href="#news">Ingressos</a>
+              </div>
+
+
+        </main>
+    </header>
+
+  
+         <!--SLIDESHOW-->
+
+         <div class="slider">
+          <div class="slide active">
+            <img src="./img/banner1.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="./img/banner2.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="./img/banner3.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="./img/banner4.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="./img/banner5.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="./img/banner6.png" alt="">
+          </div>
+          <div class="navigation">
+            <i class="fas fa-chevron-left prev-btn"></i>
+            <i class="fas fa-chevron-right next-btn"></i>
+          </div>
+          <div class="navigation-visibility">
+            <div class="slide-icon active"></div>
+            <div class="slide-icon"></div>
+            <div class="slide-icon"></div>
+            <div class="slide-icon"></div>
+            <div class="slide-icon"></div>
+          </div>
+        </div> 
+
+        <script type="text/javascript">
+          const slider = document.querySelector(".slider");
+          const nextBtn = document.querySelector(".next-btn");
+          const prevBtn = document.querySelector(".prev-btn");
+          const slides = document.querySelectorAll(".slide");
+          const slideIcons = document.querySelectorAll(".slide-icon");
+          const numberOfSlides = slides.length;
+          var slideNumber = 0;
+      
+          
+          nextBtn.addEventListener("click", () => {
+            slides.forEach((slide) => {
+              slide.classList.remove("active");
+            });
+            slideIcons.forEach((slideIcon) => {
+              slideIcon.classList.remove("active");
+            });
+      
+            slideNumber++;
+      
+            if(slideNumber > (numberOfSlides - 1)){
+              slideNumber = 0;
+            }
+      
+            slides[slideNumber].classList.add("active");
+            slideIcons[slideNumber].classList.add("active");
+          });
+      
+          
+          prevBtn.addEventListener("click", () => {
+            slides.forEach((slide) => {
+              slide.classList.remove("active");
+            });
+            slideIcons.forEach((slideIcon) => {
+              slideIcon.classList.remove("active");
+            });
+      
+            slideNumber--;
+      
+            if(slideNumber < 0){
+              slideNumber = numberOfSlides - 1;
+            }
+      
+            slides[slideNumber].classList.add("active");
+            slideIcons[slideNumber].classList.add("active");
+          });
+      
+          
+          var playSlider;
+      
+          var repeater = () => {
+            playSlider = setInterval(function(){
+              slides.forEach((slide) => {
+                slide.classList.remove("active");
+              });
+              slideIcons.forEach((slideIcon) => {
+                slideIcon.classList.remove("active");
+              });
+      
+              slideNumber++;
+      
+              if(slideNumber > (numberOfSlides - 1)){
+                slideNumber = 0;
+              }
+      
+              slides[slideNumber].classList.add("active");
+              slideIcons[slideNumber].classList.add("active");
+            }, 4000);
+          }
+          repeater();
+      
+          
+          slider.addEventListener("mouseover", () => {
+            clearInterval(playSlider);
+          });
+      
+      
+          slider.addEventListener("mouseout", () => {
+            repeater();
+          });
+          </script>
+            
+      <!--FIM DO SLIDESHOW-->
+          
+      <!--Catalogo dos Filmes em Cartaz-->
+      <div class="textos">
+      </div>
+      <p>
+a
+      </p> 
+      <h1>Filmes Em Cartaz</h1>
+      <div class="row">
+        <div class="card batman" style="background-image: url(img/filme1.png);">
+          <div class="hide-batman"><h5><br>The Batman</p></h5> <br><br><br><br><br><br><br><br><br><br>
+        <button class="butao">INFORMAÇÔES</button>
+        </div>
+        </div>
+        
+        <div class="card miranha" style="background-image: url(img/filme2.png);">
+          <div class="hide-miranha"><h5><br>Homem-Aranha:<br>Sem Volta Para Casa</h5><br><br><br><br><br><br><br><br><br>
+          <button class="butao">INFORMAÇÔES</button>
+        </div>
+        </div>
+   
+        <div class="card doutor-estranho" style="background-image: url(img/filme3.png);">
+          <div class="hide-estranho"><h5><br>Doutor Estranho:<br>No Multiverso da Loucura</h5><br><br><br><br><br><br><br><br>
+          <button class="butao">INFORMAÇÔES</button>
+          </div>
+        </div>
+
+
+        <div class="card sonic2" style="background-image: url(img/filme4.png);">
+          <div class="hide-sonic2"><h5><br>Sonic 2</h5><br><br><br><br><br><br><br><br><br><br>
+          <button class="butao">INFORMAÇÔES</button>
+        </div>
+        </div>
+
+        <div class="card dpa3" style="background-image: url(img/filme5.png);">
+          <div class="hide-dpa3"><h5><br>D.P.A 3</h5><br><br><br><br><br><br><br><br><br><br>
+          <button class="butao">INFORMAÇÔES</button>
+        </div>
+        </div>
+
+        <div class="card carasmalvados" style="background-image: url(img/filme6.png);">
+          <div class="hide-carasmalvados"><h5><br>Os Caras Malvados</h5><br><br><br><br><br><br><br><br><br><br>
+          <button class="butao">INFORMAÇÔES</button>
+        </div>
+        </div>
+</body>
+
+</html> 

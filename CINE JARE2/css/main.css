@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+
+body, #maincontainer 
+{   
+top:0px;
+padding-top:0;
+margin:auto; position:relative;
+width:1900px;
+height:100%;
+
+}
+
+.menu-principal {
+    width: 100%;
+    background-color: black;
+    height: 90px;    
+}
+
+main {
+    margin: 0;
+    width:1900px;
+    float: left;
+    position:relative;
+}
+
+.logo {
+    float: left;
+    padding: 1px;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+.login-busca ul li {
+    margin-left:10px;
+    margin-top: 10px;
+    display: inline-block;
+    float: none;
+    list-style: none;
+    text-align: center;
+}
+.login-busca {
+    width: 30%;
+    float:right;
+    text-align: center;
+}
+
+.textos {
+    width: 1900px;
+    margin-left: 0px;
+    border-bottom: 4px solid #af0000;
+    box-shadow: 0px 0px 5px 2px #af0000
+}
+
+.navbar {
+    overflow:visible;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: all 0.4s linear;
+  }
+  
+  .em-cartaz {
+    float:left;
+    overflow: hidden;
+    margin: px;
+    margin-top: 6px;
+  }
+  
+  .em-cartaz .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit; 
+    margin: 0; 
+    margin-left: 35px;
+    transition: opacity .2s, visibility .2s;
+  }
+  
+  .navbar a:hover, .em-cartaz:hover .dropbtn {
+    background-color: #750000;
+  }
+  
+  .em-cartaz-content {
+    float:left;
+    display: none;
+    position: absolute;
+    background-color: rgb(97, 97, 97);
+    width: 90%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .em-cartaz-content .header {
+    background: #750000;
+    padding: 16px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  
+  .em-cartaz:hover .em-cartaz-content {
+    display: block;
+  }
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: rgb(97, 97, 97);
+    height: 250px;
+  }
+  
+  .column a {
+    float: none;
+    color: rgb(255, 255, 255);
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .column a:hover {
+    background-color: #750000;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  h1{
+      text-align:center;
+      margin-top: 50px;
+      margin-left:px;
+      font-size:60px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: lighter;
+      color: rgb(255, 255, 255);
+  }
+  h2{
+    margin-top: 50px;
+    margin-left: 15px;
+    font-size: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: lighter;
+    color: white;
+  }
+
+  h3{
+    font-size: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  h5{
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  /*GALERIA*/
+  .card {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(255, 255, 255, 0.377);
+    padding: 15px;
+    margin: 25px;
+    width: 450px;
+    transition: all 0.2s ease-out;
+    float:left;
+    position: relative;
+    left: 11%;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    cursor:auto;
+    color: rgb(255, 255, 255);
+  }
+   
+  /*GALERIA -*/
+
+    /*Slideshow*/
+
+    .slider{
+      position: relative;
+      background: #37384b;
+      width: 1900px;
+      min-height: 720px;
+      margin: 20px;
+      overflow:hidden;
+      border-radius: 10px;
+      float: right;
+
+    }
+    
+    .slider .slide{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      clip-path: circle(0% at 0 50%);
+    }
+    
+    .slider .slide.active{
+      clip-path: circle(150% at 0 50%);
+      transition: 2s;
+    }
+    
+    .slider .slide img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .navigation{
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    .slider:hover .navigation{
+      opacity: 1;
+    }
+    
+    .prev-btn, .next-btn{
+      z-index: 999;
+      font-size: 2em;
+      color: #222;
+      background: rgba(49, 49, 49, 0.8);
+      padding: 15px;
+      cursor: pointer;
+      opacity: 5;
+    }
+    
+    .prev-btn{
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+    
+    .next-btn{
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    
+    .navigation-visibility{
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      float: center;
+    }
+    
+    .navigation-visibility .slide-icon{
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.5);
+      width: 20px;
+      height: 10px;
+      transform: translateY(-50px);
+      margin: 0 6px;
+      border-radius: 2px;
+      box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    }
+    
+    .navigation-visibility .slide-icon.active{
+      background: #4285F4;
+    }
+    
+    @media (max-width: 900px){
+      .slider{
+        width: 100%;
+      }
+    
+      .slider .slide .info{
+        position: relative;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    
+    @media (max-width: 500px){
+      .slider .slide .info h2{
+        font-size: 1.8em;
+        line-height: 40px;
+      }
+    
+      .slider .slide .info p{
+        font-size: 0.9em;
+      }
+    }
+          
+ /*Fim Do Slideshow -*/
+
+         /*Catalogo De Filmes*/
+  .batman {
+    text-align: left;
+    width: 201;
+      height: 268;
+    object-fit: cover
+
+}
+  
+          .hide-batman {
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left: 0;
+          right: 0;
+          text-align: center;
+          background: rgba(0, 0, 0, 0.72);
+          color: #fff;
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity .2s, visibility .2s;
+          font-family: 'Josefin Sans', sans-serif;
+          
+        }
+
+
+        .batman:hover .hide-batman {
+          visibility: visible;
+          opacity: 1;}
+
+    .miranha {
+      text-align: center;
+      width: 201;
+      height: 268;
+    }
+
+          .hide-miranha {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.72);
+            color: #fff;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .2s, visibility .2s;
+            font-family: 'Josefin Sans', sans-serif;
+          }
+
+          .miranha:hover .hide-miranha {
+            visibility: visible;
+            opacity: 1;}
+
+
+    .doutor-estranho {
+      text-align: center;
+      width: 201;
+      height: 268;
+    text-size-adjust: 5px;
+  }
+    
+          .hide-estranho {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.72);
+            color: #fff;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .2s, visibility .2s;
+            font-family: 'Josefin Sans', sans-serif;
+          }
+
+          .doutor-estranho:hover .hide-estranho {
+            visibility: visible;
+            opacity: 1;}
+
+
+    .dpa3 {
+      text-align: center;
+      width: 201;
+      height: 268;}
+
+          .hide-dpa3 {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.72);
+            color: #fff;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .2s, visibility .2s;
+            font-family: 'Josefin Sans', sans-serif;
+          }
+
+          .dpa3:hover .hide-dpa3 {
+            visibility: visible;
+            opacity: 1;}
+
+    .sonic2 {
+      text-align: center;
+      width: 201;
+      height: 268;}
+
+          .hide-sonic2 {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.72);
+            color: #fff;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .2s, visibility .2s;
+            font-family: 'Josefin Sans', sans-serif;
+          }
+
+          .sonic2:hover .hide-sonic2 {
+            visibility: visible;
+            opacity: 1;
+            }
+
+
+    .carasmalvados {
+      text-align: center;
+      width: 201;
+      height: 268;}
+
+          .hide-carasmalvados {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.72);
+            color: #fff;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .2s, visibility .2s;
+            font-family: 'Josefin Sans', sans-serif;
+          }
+
+          .carasmalvados:hover .hide-carasmalvados {
+            visibility: visible;
+            opacity: 1;}
+  /*Fim do Catalogo de Filmes*/
+
+  .butao {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: black;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+  }
